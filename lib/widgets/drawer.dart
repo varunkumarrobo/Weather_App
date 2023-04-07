@@ -24,23 +24,28 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               //  _key.currentState!.closeDrawer();
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const FavoriteScreen(),
-                      settings: const RouteSettings(arguments: {"fav": true},),),);
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FavoriteScreen(),
+                  settings: const RouteSettings(
+                    arguments: {"fav": true},
+                  ),
+                ),
+              );
             },
           ),
           ListTile(
             title: const Text('Recent Search'),
             onTap: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const FavoriteScreen(),
-                      settings:
-                          const RouteSettings(arguments: {"fav": false},),),);
-              // Navigator.pushReplacement(context,
-              //     MaterialPageRoute(builder: (context) => const RecentSearch()));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FavoriteScreen(),
+                  settings: const RouteSettings(
+                    arguments: {"fav": false},
+                  ),
+                ),
+              );
             },
           ),
         ],
